@@ -33,25 +33,28 @@ body{
 }
 .slides img{
     width: inherit;
-    height: inherit;
-   /* box-shadow: 10px 10px 22px -10px rgb(20, 28, 56);*/
+    height: inherit;   
     border-radius: 30px; 
 }
 
 .phrase_item{
     font-family: 'Times New Roman', Times, serif;
     transition: all 0.8s ease 0.1s; 
-    margin: 0 12% 0 0;
-    font-size: 1.3rem;       
+    margin: 0 0 5% 0;
+    font-size: 1.3rem;   
+    height: 7rem;    
 }
 .phrase{
     display: flex;
+    flex-direction: column;
     width: 70%;
+    height: 3rem;
     overflow: hidden;
-   
+      
 }
 .controls{
-    display: flex;    
+    display: flex;  
+    padding-top: 1%;  
 }
 label{
     cursor: pointer;
@@ -65,4 +68,72 @@ label{
     border: 4px solid rgb(22, 34, 73);      
     background-color: rgb(22, 34, 73);
     margin: 0 0 2rem 1rem;
+}
+
+
+#slide1:checked ~ .controls #first,
+#slide2:checked ~ .controls #second,
+#slide3:checked ~ .controls #three,
+#slide4:checked ~ .controls #four,
+#slide5:checked ~ .controls #five
+ {  background-color: rgb(123, 197, 219);
+    border: 4px solid rgb(22, 34, 73);
+}
+
+#slide1:checked:hover ~ .controls #first,
+#slide2:checked:hover ~ .controls #second,
+#slide3:checked:hover ~ .controls #three,
+#slide4:checked:hover ~ .controls #four,
+#slide5:checked:hover ~ .controls #five
+{   background-color: rgb(123, 197, 219);
+    border: 4px solid  rgb(102, 156, 138);
+}
+
+#slide1:hover ~ .controls #first,
+#slide2:hover ~ .controls #second,
+#slide3:hover ~ .controls #three,
+#slide4:hover ~ .controls #four,
+#slide5:hover ~ .controls #five
+{   background-color: rgb(102, 156, 138);
+    border: 4px solid rgb(102, 156, 138);
+}
+
+#slide1:active ~ .controls #first,
+#slide2:active ~ .controls #second,
+#slide3:active ~ .controls #three,
+#slide4:active ~ .controls #four,
+#slide5:active ~ .controls #five
+{    background-color: rgb(5, 7, 6);
+    border: 4px solid rgb(9, 14, 12);
+}
+
+@media screen and (max-width: 950.98px){
+
+    .wrapper {
+        height: 100%;
+        flex-direction: column;
+        grid-row-gap: 10px;
+        align-items: center;        
+    }
+    .slider_wrapper {
+        margin-bottom: 2%;
+    }     
+    .dots {
+        order: 2;
+        justify-content: center;
+    }
+    .phrase{
+        order: 3;        
+        align-self: flex-start;
+        width: 100%;
+        height: 3.8rem;
+    }
+    .phrase_item{
+        height: 4rem; 
+        margin: 0 0 4% 0;
+    }
+    .controls{         
+        padding-top: 0;  
+    }
+    
 }

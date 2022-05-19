@@ -141,6 +141,11 @@ label{
 #slide5:checked ~ .phrase .phrase_item{
     transform: translate(0, -400%);
 }
+@media screen and (max-width: 725.89px){
+    .wrapper{
+        padding: 1rem 9rem;
+}
+}
 
 
 @media screen and (max-width: 600.89px){
